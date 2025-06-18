@@ -95,7 +95,7 @@
       {% endfor %}
 
       {{ scheme_classes | prepend: 'body' }} {
-        color: rgba(var(--color-foreground), 0.75);
+        color: rgba(var(--color-foreground));
         background-color: rgb(var(--color-background));
       }
 
@@ -122,7 +122,7 @@
         --media-shadow-blur-radius: {{ settings.media_shadow_blur }}px;
         --media-shadow-visible: {% if settings.media_shadow_opacity > 0 %}1{% else %}0{% endif %};
 
-        --page-width: {{ settings.page_width | divided_by: 10 }}rem;
+        --page-width: 192rem;
         --page-width-margin: {% if settings.page_width == '1600' %}2{% else %}0{% endif %}rem;
 
         --product-card-image-padding: {{ settings.card_image_padding | divided_by: 10.0 }}rem;
@@ -256,15 +256,8 @@
     {% endstyle %}
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
-    <link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
-
-    {%- if settings.cart_type == 'drawer' -%}
-      {{ 'component-cart-drawer.css' | asset_url | stylesheet_tag }}
-      {{ 'component-cart.css' | asset_url | stylesheet_tag }}
-      {{ 'component-totals.css' | asset_url | stylesheet_tag }}
-      {{ 'component-price.css' | asset_url | stylesheet_tag }}
-      {{ 'component-discounts.css' | asset_url | stylesheet_tag }}
-    {%- endif -%}
+    {{ 'custom-style-guide.css' | asset_url | stylesheet_tag }}
+    {{ 'custom.css' | asset_url | stylesheet_tag }}
 
     {%- unless settings.type_body_font.system? -%}
       {% comment %}theme-check-disable AssetPreload{% endcomment %}
@@ -298,28 +291,138 @@
     </script>
   </head>
 
+  <style>
+    .we-are-boma-text-lateral {
+      width: 24px;
+      position: relative;
+      z-index: 999999;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .text-lateral-fixed {
+      flex: 1 1 0;
+      overflow: hidden;
+    }
+
+    .text-lateral {
+      white-space: nowrap;
+      word-break: keep-all;
+      line-height: 24px;
+    }
+
+    .text-lateral {
+      writing-mode: tb-rl;
+      opacity: 0.7;
+    }
+
+    .w-100-home{
+      width: calc(100% - 48px)
+    }
+
+    @media screen and (max-width: 767px) {
+      .we-are-boma-text-lateral {
+        width: 16px;
+      }
+
+      .w-100-home{
+        width: calc(100% - 32px)
+      }
+      
+      .text-lateral {
+        font-size: 0.75rem;
+        line-height: 16px;
+      }
+    }
+  </style>
+
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
-    <a class="skip-to-content-link button visually-hidden" href="#MainContent">
-      {{ 'accessibility.skip_to_text' | t }}
-    </a>
+    <div style="display:flex">
+      {%- if settings.cart_type == 'drawer' -%}
+        {%- render 'cart-drawer' -%}
+      {%- endif -%}
 
-    {%- if settings.cart_type == 'drawer' -%}
-      {%- render 'cart-drawer' -%}
-    {%- endif -%}
+      <div class="we-are-boma-text-lateral">
+        <div class="text-lateral-fixed">
+          <div class="text-lateral" style="">
+            born of music addiction born of music addiction born of music addiction born of music addiction born of
+            music born of music addiction born of music addiction born of music addiction born of music addiction born
+            of music born of music addiction born of music addiction born of music addiction born of music addiction
+            born of music born of music addiction born of music addiction born of music addiction born of music
+            addiction born of music born of music addiction born of music addiction born of music addiction born of
+            music addiction born of music born of music addiction born of music addiction born of music addiction born
+            of music addiction born of music born of music addiction born of music addiction born of music addiction
+            born of music addiction born of music born of music addiction born of music addiction born of music
+            addiction born of music addiction born of music born of music addiction born of music addiction born of
+            music addiction born of music addiction born of music born of music addiction born of music addiction born
+            of music addiction born of music addiction born of music born of music addiction born of music addiction
+            born of music addiction born of music addiction born of music born of music addiction born of music
+            addiction born of music addiction born of music addiction born of music born of music addiction born of music addiction born of music addiction born of music addiction born of
+            music born of music addiction born of music addiction born of music addiction born of music addiction born
+            of music born of music addiction born of music addiction born of music addiction born of music addiction
+            born of music born of music addiction born of music addiction born of music addiction born of music
+            addiction born of music born of music addiction born of music addiction born of music addiction born of
+            music addiction born of music born of music addiction born of music addiction born of music addiction born
+            of music addiction born of music born of music addiction born of music addiction born of music addiction
+            born of music addiction born of music born of music addiction born of music addiction born of music
+            addiction born of music addiction born of music born of music addiction born of music addiction born of
+            music addiction born of music addiction born of music born of music addiction born of music addiction born
+            of music addiction born of music addiction born of music born of music addiction born of music addiction
+            born of music addiction born of music addiction born of music born of music addiction born of music
+            addiction born of music addiction born of music addiction born of music
+          </div>
+        </div>
+      </div>
+      <div class="w-100-home">
+        <a class="skip-to-content-link button visually-hidden" href="#MainContent">
+          {{ 'accessibility.skip_to_text' | t }}
+        </a>
+        {% sections 'header-group' %}
 
-    {% sections 'header-group' %}
+        <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
+          {{ content_for_layout }}
+        </main>
 
-    <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
-      {{ content_for_layout }}
-    </main>
+        {% sections 'footer-group' %}
 
-    {% sections 'footer-group' %}
-
-    <ul hidden>
-      <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
-      <li id="a11y-new-window-message">{{ 'accessibility.link_messages.new_window' | t }}</li>
-    </ul>
-
+        <ul hidden>
+          <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
+          <li id="a11y-new-window-message">{{ 'accessibility.link_messages.new_window' | t }}</li>
+        </ul>
+      </div>
+      <div class="we-are-boma-text-lateral">
+        <div class="text-lateral-fixed">
+          <div class="text-lateral" style="">
+            born of music addiction born of music addiction born of music addiction born of music addiction born of
+            music born of music addiction born of music addiction born of music addiction born of music addiction born
+            of music born of music addiction born of music addiction born of music addiction born of music addiction
+            born of music born of music addiction born of music addiction born of music addiction born of music
+            addiction born of music born of music addiction born of music addiction born of music addiction born of
+            music addiction born of music born of music addiction born of music addiction born of music addiction born
+            of music addiction born of music born of music addiction born of music addiction born of music addiction
+            born of music addiction born of music born of music addiction born of music addiction born of music
+            addiction born of music addiction born of music born of music addiction born of music addiction born of
+            music addiction born of music addiction born of music born of music addiction born of music addiction born
+            of music addiction born of music addiction born of music born of music addiction born of music addiction
+            born of music addiction born of music addiction born of music born of music addiction born of music
+            addiction born of music addiction born of music addiction born of music born of music addiction born of music addiction born of music addiction born of music addiction born of
+            music born of music addiction born of music addiction born of music addiction born of music addiction born
+            of music born of music addiction born of music addiction born of music addiction born of music addiction
+            born of music born of music addiction born of music addiction born of music addiction born of music
+            addiction born of music born of music addiction born of music addiction born of music addiction born of
+            music addiction born of music born of music addiction born of music addiction born of music addiction born
+            of music addiction born of music born of music addiction born of music addiction born of music addiction
+            born of music addiction born of music born of music addiction born of music addiction born of music
+            addiction born of music addiction born of music born of music addiction born of music addiction born of
+            music addiction born of music addiction born of music born of music addiction born of music addiction born
+            of music addiction born of music addiction born of music born of music addiction born of music addiction
+            born of music addiction born of music addiction born of music born of music addiction born of music
+            addiction born of music addiction born of music addiction born of music
+          </div>
+        </div>
+      </div>
+    </div>
     <script>
       window.shopUrl = '{{ request.origin }}';
       window.routes = {

@@ -1,0 +1,73 @@
+body {
+  text-transform: lowercase;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+.text-align-left {
+  text-align: left;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.align-content-center {
+  align-content: center;
+}
+
+.d-inline-flex {
+  display: inline-flex;
+}
+
+.d-flex.flex-column {
+  flex-flow: column;
+}
+
+.text-no-wrap {
+  white-space: nowrap;
+}
+
+.text-vetor {
+  display: block !important;
+  border-bottom: 2px solid #ffffff;
+  width: 106px;
+  margin-bottom: 12px;
+  margin-left: 4px;
+  margin-right: -3px;
+}
+
+.text-vetor.black {
+  border-bottom: 2px solid #000000;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.cart__checkout-button {
+  text-transform: lowercase;
+}
+
+.price {
+  white-space: nowrap;
+}
