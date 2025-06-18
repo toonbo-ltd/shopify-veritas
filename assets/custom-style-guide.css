@@ -1,13 +1,7 @@
 @font-face {
-  font-family: 'Boma';
-  src: url('boma.otf') format('opentype');
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: 'Grosa';
-  src: url('Grosa-Regular.otf') format('opentype');
-  font-weight: 400;
+  font-family: 'Impact';
+  src: url('impact.ttf') format('truetype');
+  font-weight: 700;
 }
 
 :root {
