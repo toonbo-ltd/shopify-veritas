@@ -114,9 +114,11 @@
     display: flex;
   }
 
-  .born-of-music-footer-wrap {
+  .art-over-footer-wrap {
     display: flex;
-    margin-top: 32px;
+    flex-direction: column;
+    margin-top: 3.2rem;
+    gap: 1.6rem;
   }
 
   .btn-footer {
@@ -176,21 +178,12 @@
     #w-node-_3c7ed6fa-2af1-b985-1b01-082a21afaab5-21afaaa5 {
       justify-self: center;
     }
-
-    .born-of-music-footer-wrap {
-      align-items: center;
-      flex-wrap: wrap;
-    }
   }
 
   @media screen and (max-width: 750px) {
     .text-vetor.footer {
       margin-bottom: 7px;
       margin-right: -3px;
-    }
-
-    .born-of-music-footer-wrap {
-      display: none;
     }
   }
 
@@ -199,7 +192,7 @@
     padding-top: 32px;
     padding-bottom: 0;
     color: white;
-    background-color: black;
+    background-color: var(--marrom);
   }
 
   @media (min-width: 749px) {
@@ -211,7 +204,7 @@
   .copyright_wrap {
     padding-top: 48px;
     padding-bottom: 16px;
-    gap: 16px;
+    gap: 2.4rem;
     width: 100%;
     justify-content: space-between;
     flex-direction: column-reverse;
@@ -221,8 +214,8 @@
   @media (min-width: 749px) {
     .copyright_wrap {
       flex-direction: row;
-      gap: 30px;
-      padding-top: 32px;
+      padding-top: 3.2rem;
+      align-items: end;
     }
   }
 
@@ -336,8 +329,8 @@
   }
 
   .form_input-footer {
-    border: 2px solid var(--red);
-    background-color: var(--black);
+    border: 2px solid #0000ff;
+    background-color: #fff;
     color: var(--white);
     border-radius: 0;
     height: auto;
@@ -401,28 +394,12 @@
   <footer class="footer-boma ">
     <div class="w-layout-grid footer4_top-wrapper text-color-white">
       <div class="footer-boma-wrap">
-        <a href="/" id="w-node-_3c7ed6fa-2af1-b985-1b01-082a21afaaab-21afaaa5" class="footer4_logo-link"
-          ><img
-            src="https://cdn.shopify.com/s/files/1/0886/3649/0004/files/logo-boma-footer.svg?v=1720467641"
-            width="72"
-            height="auto"
-            style="min-width: 24px; max-width: 100%"
-        ></a>
-        <div class="born-of-music-footer-wrap text-color-white">
-          <span class="h5-sg">born of music addiction</span>
-        </div>
         <div
           id="w-node-_3c7ed6fa-2af1-b985-1b01-082a21afaab5-21afaaa5"
           class="w-layout-grid footer4_social-list div-block-4 mobile-links"
         >
           <div class="d-flex flex-column social-wrap">
             <div class="d-flex align-items-center">
-              <img
-                src="https://cdn.shopify.com/s/files/1/0886/3649/0004/files/instagram.png?v=1724297462"
-                class="social-icon"
-                width="24px"
-                height="auto"
-              >
               <a
                 href="https://www.instagram.com/weare_boma/"
                 target="_blank"
@@ -431,12 +408,6 @@
               >
             </div>
             <div class="d-flex align-items-center">
-              <img
-                src="https://cdn.shopify.com/s/files/1/0886/3649/0004/files/youtube.png?v=1724297462"
-                class="social-icon"
-                width="24px"
-                height="auto"
-              >
               <a
                 href="https://www.youtube.com/@boma3263"
                 target="_blank"
@@ -445,12 +416,6 @@
               >
             </div>
             <div class="d-flex align-items-center">
-              <img
-                src="https://cdn.shopify.com/s/files/1/0886/3649/0004/files/spotify.png?v=1724297462"
-                class="social-icon"
-                width="24px"
-                height="auto"
-              >
               <a
                 href="https://open.spotify.com/user/jpmhidxq4xu5d9uhf249wgku3?si=58ac76862e66495b"
                 target="_blank"
@@ -458,26 +423,6 @@
                 >spotify</a
               >
             </div>
-            <div class="d-flex align-items-center">
-              <img
-                src="https://cdn.shopify.com/s/files/1/0886/3649/0004/files/tiktok.png?v=1724297462"
-                class="social-icon"
-                width="24px"
-                height="auto"
-              >
-              <a
-                href="https://www.tiktok.com/@weare_boma"
-                target="_blank"
-                class="btn-footer is-link text-sg h5-md-sg text-color-white"
-                >tiktok</a
-              >
-            </div>
-          </div>
-          <div class="atendimento">
-            <p class="h5-sg text-color-white">Atendimento</p>
-            <br>
-            <p class="text-sg text-color-white">E-mail: boma@fashionlog.com.br</p>
-            <p class="text-sg text-color-white">Segunda à sexta, das 8h às 17h</p>
           </div>
         </div>
       </div>
@@ -565,12 +510,6 @@
       >
         <div class="d-flex flex-column social-wrap">
           <div class="d-flex align-items-center">
-            <img
-              src="https://cdn.shopify.com/s/files/1/0886/3649/0004/files/instagram.png?v=1724297462"
-              class="social-icon"
-              width="24px"
-              height="auto"
-            >
             <a
               href="https://www.instagram.com/weare_boma/"
               target="_blank"
@@ -580,12 +519,6 @@
           </div>
 
           <div class="d-flex align-items-center">
-            <img
-              src="https://cdn.shopify.com/s/files/1/0886/3649/0004/files/youtube.png?v=1724297462"
-              class="social-icon"
-              width="24px"
-              height="auto"
-            >
             <a
               href="https://www.youtube.com/@boma3263"
               target="_blank"
@@ -595,12 +528,6 @@
           </div>
 
           <div class="d-flex align-items-center">
-            <img
-              src="https://cdn.shopify.com/s/files/1/0886/3649/0004/files/spotify.png?v=1724297462"
-              class="social-icon"
-              width="24px"
-              height="auto"
-            >
             <a
               href="https://open.spotify.com/user/jpmhidxq4xu5d9uhf249wgku3?si=58ac76862e66495b"
               target="_blank"
@@ -608,36 +535,18 @@
               >spotify</a
             >
           </div>
-
-          <div class="d-flex align-items-center">
-            <img
-              src="https://cdn.shopify.com/s/files/1/0886/3649/0004/files/tiktok.png?v=1724297462"
-              class="social-icon"
-              width="24px"
-              height="auto"
-            >
-            <a
-              href="https://www.tiktok.com/@weare_boma"
-              target="_blank"
-              class="btn-footer is-link h5-sg text-color-white"
-              >tiktok</a
-            >
-          </div>
-        </div>
-        <div class="text-color-white">
-          <div class="atendimento">
-            <p class="h5-sg text-color-white">Atendimento</p>
-            <p class="text-sg text-color-white">E-mail: boma@fashionlog.com.br</p>
-            <p class="text-sg text-color-white">Segunda à sexta, das 8h às 17h</p>
-          </div>
         </div>
       </div>
     </div>
     <div class="copyright_wrap d-flex">
-      <span class="mobile-14 copyright opacity-70"
-        >©2024 Boma all rights reserved . designed by
-        <a href="https://toonbo.com.br" class="text-color-white toonbo">toonbo</a></span
-      >
+      <div class="art-over-footer-wrap text-color-white">
+        <span class="h5-sg">art over money</span>
+        <span class="mobile-14 copyright opacity-70"
+          >©2024 Boma all rights reserved . designed by
+          <a href="https://toonbo.com.br" class="text-color-white toonbo">toonbo</a></span
+        >
+      </div>
+
       <div class="copyright_links">
         <a class="mobile-14 text-color-white opacity-md-70" href="/pages/politica-de-privacidade2"
           >Política de privacidade</a
