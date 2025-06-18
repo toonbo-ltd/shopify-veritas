@@ -46,21 +46,9 @@
         "show_text_below": true,
         "accessibility_info": "Apresentação de slides sobre nossa marca"
       }
-    },
-    "custom_heading_veritas_NFpbMB": {
-      "type": "custom-heading-veritas",
-      "name": "Heading Boma",
-      "settings": {
-        "heading": "Boma",
-        "exibir": false,
-        "link": "",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
     }
   },
   "order": [
-    "slideshow_veritas_er3dNF",
-    "custom_heading_veritas_NFpbMB"
+    "slideshow_veritas_er3dNF"
   ]
 }
