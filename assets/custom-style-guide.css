@@ -4,6 +4,12 @@
   font-weight: 700;
 }
 
+@font-face {
+  font-family: 'Anton';
+  src: url('Anton-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
 :root {
   --red: #fb0d1b;
   --black: #000;
