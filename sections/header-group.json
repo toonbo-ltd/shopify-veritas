@@ -37,6 +37,10 @@
     },
     "header": {
       "type": "header",
+      "custom_css": [
+        ".header__heading {display: none;}",
+        ".header__menu-item {font-family: \"Impact\", sans;}"
+      ],
       "settings": {
         "logo_position": "middle-left",
         "mobile_logo_position": "center",
