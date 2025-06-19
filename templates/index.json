@@ -46,9 +46,21 @@
         "show_text_below": true,
         "accessibility_info": "Apresentação de slides sobre nossa marca"
       }
+    },
+    "custom_art_over_money_xfxpYX": {
+      "type": "custom-art-over-money",
+      "name": "Art Over Money",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "image": "shopify://shop_images/art_over_money.jpg",
+        "image_alt": "Art Over Money"
+      }
     }
   },
   "order": [
-    "slideshow_veritas_er3dNF"
+    "slideshow_veritas_er3dNF",
+    "custom_art_over_money_xfxpYX"
   ]
 }
