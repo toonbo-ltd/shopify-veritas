@@ -39,7 +39,7 @@
       "type": "header",
       "custom_css": [
         ".header__heading {display: none;}",
-        ".header__menu-item {font-family: \"Impact\", sans;}"
+        ".header__menu-item {font-family: \"Anton\", sans;}"
       ],
       "settings": {
         "logo_position": "middle-left",
