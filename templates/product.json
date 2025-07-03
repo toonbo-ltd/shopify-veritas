@@ -1,7 +1,7 @@
 {
   "sections": {
     "main": {
-      "type": "main-product-veritas",
+      "type": "main-product",
       "blocks": {
         "vendor": {
           "type": "text",
