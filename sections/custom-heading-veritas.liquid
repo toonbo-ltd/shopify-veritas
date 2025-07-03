@@ -31,6 +31,10 @@
     margin: auto;
   }
 
+  .heading-veritas-block.blue {
+    background-color: var(--blue);
+  }
+
   .ver-mais {
     align-items: center;
     padding-inline: 24px;
@@ -43,7 +47,7 @@
 
 <div class="section-{{ section.id }}-padding">
   <div class="d-flex justify-content-between align-items-center">
-    <div class="heading-veritas-block">
+    <div class="heading-veritas-block {% if section.settings.exibir_azul %}blue{% endif %}">
       <h2 class="h4-sg">{{ section.settings.heading }}</h2>
     </div>
     {% if section.settings.exibir and section.settings.link != blank %}
@@ -74,6 +78,12 @@
       "type": "checkbox",
       "id": "exibir",
       "label": "Exibir +",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "exibir_azul",
+      "label": "Section azul",
       "default": false
     },
     {
