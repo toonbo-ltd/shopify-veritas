@@ -13,10 +13,22 @@
 {%- endstyle -%}
 
 <style>
-  .heading-boma-block {
+  .heading-veritas-block {
     padding-inline: 24px;
-    background-color: var(--yellow);
     display: inline-block;
+    position: relative;
+  }
+
+  .heading-veritas-block::after {
+    z-index: -1;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 58%;
+    background-color: var(--yellow);
+    position: absolute;
+    inset: 0;
+    margin: auto;
   }
 
   .ver-mais {
@@ -31,7 +43,7 @@
 
 <div class="section-{{ section.id }}-padding">
   <div class="d-flex justify-content-between align-items-center">
-    <div class="heading-boma-block">
+    <div class="heading-veritas-block">
       <h2 class="h4-sg">{{ section.settings.heading }}</h2>
     </div>
     {% if section.settings.exibir and section.settings.link != blank %}

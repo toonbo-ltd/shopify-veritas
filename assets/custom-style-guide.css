@@ -15,7 +15,6 @@
   --black: #000;
   --white: #fff;
   --black-70: #4d4d4d;
-
   --yellow: #ffff00;
   --marrom: #d8d4ca;
   --green: #7ac943;
@@ -153,7 +152,7 @@ p {
 /* buttons */
 
 .btn-primary {
-  font-family: 'Boma';
+  font-family: 'Oswald', sans-serif;
   color: #fff;
   text-align: left;
   text-transform: lowercase;

@@ -325,13 +325,11 @@
   .form_input-footer {
     border: 2px solid #0000ff;
     background-color: #fff;
-    color: var(--white);
     border-radius: 0;
     height: auto;
     min-height: 2.75rem;
     margin-bottom: 0;
     padding: 0.5rem 0.75rem;
-    font-size: 1rem;
     line-height: 1.6;
     width: 100%;
   }
@@ -350,10 +348,6 @@
     }
   }
 
-  .opacity-70 {
-    opacity: 0.7;
-  }
-
   .toonbo {
     text-decoration: underline;
   }
@@ -361,10 +355,6 @@
   @media (min-width: 750px) {
     .mobile-links {
       display: none;
-    }
-
-    .opacity-md-70 {
-      opacity: 0.7;
     }
   }
 
@@ -398,7 +388,7 @@
                 href=""
                 target="_blank"
                 class="btn-footer is-link text-sg  h5-md-sg text-color-white"
-                >instagram</a
+                >Instagram</a
               >
             </div>
             <div class="d-flex align-items-center">
@@ -406,15 +396,7 @@
                 href=""
                 target="_blank"
                 class="btn-footer is-link text-sg  h5-md-sg text-color-white"
-                >youtube</a
-              >
-            </div>
-            <div class="d-flex align-items-center">
-              <a
-                href=""
-                target="_blank"
-                class="btn-footer is-link text-sg h5-md-sg text-color-white"
-                >spotify</a
+                >Facebook</a
               >
             </div>
           </div>
@@ -489,7 +471,8 @@
                     </div>
                   {% endform %}
                   <div class="politica-newsletter text-align-left text-color-white opacity-70">
-                    CLICANDO EM ENVIAR VOCÊ CONCORDA COM OS TERMOS E CONDIÇÕES da BOMA
+                    Clicando em enviar você concorda com a nossa
+                    <a href="/pages/politica-de-privacidade2" class="text-color-white">política de privacidade</a>
                   </div>
                 </div>
               </div>
@@ -505,28 +488,18 @@
         <div class="d-flex flex-column social-wrap">
           <div class="d-flex align-items-center">
             <a
-              href="https://www.instagram.com/weare_boma/"
+              href=""
               target="_blank"
               class="btn-footer is-link h5-sg text-color-white"
-              >instagram</a
+              >Instagram</a
             >
           </div>
-
           <div class="d-flex align-items-center">
             <a
-              href="https://www.youtube.com/@boma3263"
+              href=""
               target="_blank"
               class="btn-footer is-link h5-sg text-color-white"
-              >youtube</a
-            >
-          </div>
-
-          <div class="d-flex align-items-center">
-            <a
-              href="https://open.spotify.com/user/jpmhidxq4xu5d9uhf249wgku3?si=58ac76862e66495b"
-              target="_blank"
-              class="btn-footer is-link h5-sg text-color-white"
-              >spotify</a
+              >Facebook</a
             >
           </div>
         </div>
@@ -542,71 +515,16 @@
       </div>
 
       <div class="copyright_links">
-        <a class="mobile-14 text-color-white opacity-md-70" href="/pages/politica-de-privacidade2"
-          >Política de privacidade</a
-        >
-        <a class="mobile-14 text-color-white opacity-md-70" href="/pages/termos-de-servico">Termos de serviço</a>
-        <a class="mobile-14 text-color-white opacity-md-70" href="/pages/politica-de-envios">Política de envio</a>
-        <a class="mobile-14 text-color-white opacity-md-70" href="/pages/politica-de-trocas-e-devolucoes"
+        <a class="mobile-14 text-color-white" href="/pages/politica-de-privacidade2">Política de privacidade</a>
+        <a class="mobile-14 text-color-white" href="/pages/termos-de-servico">Termos de serviço</a>
+        <a class="mobile-14 text-color-white" href="/pages/politica-de-envios">Política de envio</a>
+        <a class="mobile-14 text-color-white" href="/pages/politica-de-trocas-e-devolucoes"
           >Política de troca e devolução</a
         >
       </div>
     </div>
   </footer>
 </div>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-
-<!-- mouse circle -->
-<div class="circle"></div>
-
-<script
-  defer
-  src="https://code.jquery.com/jquery-3.7.1.min.js"
-  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-  crossorigin="anonymous"
-></script>
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
-
-<script>
-  window.addEventListener('DOMContentLoaded', function () {
-    let $circle = $('.circle');
-
-    function moveCircle(e) {
-      TweenLite.to($circle, 0.3, {
-        css: {
-          left: e.pageX,
-          top: e.pageY,
-        },
-      });
-    }
-
-    $(window).on('mousemove', moveCircle);
-  });
-</script>
-
-<style>
-  .circle {
-    position: absolute;
-    width: 14px;
-    height: 14px;
-    top: 50%;
-    left: 50%;
-    margin: -40px 0 0 -40px;
-    background: var(--red, #fb0d1b);
-    border-radius: 80%;
-    backface-visibility: hidden;
-    mix-blend-mode: hard-light;
-    z-index: 99;
-  }
-
-  @media (max-width: 991px) {
-    .circle {
-      display: none;
-    }
-  }
-</style>
 
 {% schema %}
 {
