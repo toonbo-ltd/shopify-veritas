@@ -49,11 +49,23 @@
         "padding_top": 36,
         "padding_bottom": 100
       }
+    },
+    "custom_art_over_money_MDqGxq": {
+      "type": "custom-art-over-money",
+      "name": "Art Over Money",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52,
+        "image": "shopify://shop_images/art_over_money.jpg",
+        "image_alt": "Art Over Money"
+      }
     }
   },
   "order": [
     "banner",
     "custom_heading_veritas_7TN3Ch",
-    "product-grid"
+    "product-grid",
+    "custom_art_over_money_MDqGxq"
   ]
 }
