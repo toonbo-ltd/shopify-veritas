@@ -238,6 +238,40 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "collage_TPy8yB": {
+      "type": "collage",
+      "blocks": {
+        "product_8tdBri": {
+          "type": "product",
+          "settings": {
+            "product": "regata-veritas",
+            "second_image": false
+          }
+        },
+        "product_jQMWP8": {
+          "type": "product",
+          "settings": {
+            "product": "regata-veritas-copia",
+            "second_image": false
+          }
+        }
+      },
+      "block_order": [
+        "product_8tdBri",
+        "product_jQMWP8"
+      ],
+      "name": "t:sections.collage.presets.name",
+      "settings": {
+        "heading": "Colagem multimídia",
+        "heading_size": "h1",
+        "desktop_layout": "right",
+        "mobile_layout": "collage",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -245,6 +279,7 @@
     "image-with-text",
     "custom_art_over_money_QWbBbD",
     "multicolumn",
-    "related-products"
+    "related-products",
+    "collage_TPy8yB"
   ]
 }
