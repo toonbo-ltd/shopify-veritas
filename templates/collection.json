@@ -24,6 +24,7 @@
       "settings": {
         "heading": "COLEÇÃO",
         "exibir": false,
+        "exibir_azul": false,
         "link": "",
         "padding_top": 40,
         "padding_bottom": 52
@@ -46,7 +47,7 @@
         "filter_type": "horizontal",
         "enable_sorting": true,
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 100
       }
     }
   },
