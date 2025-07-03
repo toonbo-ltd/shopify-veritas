@@ -245,7 +245,7 @@
       "settings": {
         "heading": "produtos",
         "exibir": false,
-        "link": "",
+        "link": "shopify://pages/contact",
         "padding_top": 40,
         "padding_bottom": 52
       }
